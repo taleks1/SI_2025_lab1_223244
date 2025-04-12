@@ -1,0 +1,62 @@
+dokumentacija
+документација за дел 2: Софтверски развој со користење на Git систем за контрола на верзии.
+13.Aleksandra@DESKTOP-CF8O1AP MINGW64 ~/SI_2025_lab1_223244 (master)
+$ git fetch origin
+From https://github.com/taleks1/SI_2025_lab1_223244
+ * [new branch]      1-remove-a-task-by-name -> origin/1-remove-a-task-by-name
+ * [new branch]      5-filter-tasks-by-category -> origin/5-filter-tasks-by-category
+ * [new branch]      7-count-tasks-per-category -> origin/7-count-tasks-per-category
+
+14. $ git checkout 1-remove-a-task-by-name 
+15. функцијата ја додадов преку Notepad 
+public void removeTask(String name) {
+        // TODO: Implement removal logic
+    tasks.removeIf(task -> task.getName().equals(name));
+    }
+16. $ git commit -m ""
+17. $ git add .
+18. $ git push origin 1-remove-a-taks-by-name
+19. за branch=5-filter-tasks-by-category
+$ git checkout 5-filter-tasks-by-category 
+функцијата ја додадов преку Notepad 
+ public List<Task> filterByCategory(String category) {
+        // TODO: Implement filtering logic
+         List<Task> filteredTasks = new ArrayList<>();
+    for (Task task : tasks) {
+        if (task.getCategory().equalsIgnoreCase(category)) {
+            filteredTasks.add(task);
+        }
+    }
+    return filteredTasks;
+    }
+$ git commit -m ""
+$ git add .
+$ git push origin 5-filter-tasks-by-category
+за branch=7-count-tasks-per-category
+$ git checkout 7-count-tasks-per-category 
+функцијата ја додадов преку Notepad 
+ public Map<String, Integer> countTasksPerCategory() {
+        // TODO: Implement counting logic
+        Map<String, Integer> categoryCount = new HashMap<>();
+
+    for (Task task : tasks) {
+        String category = task.getCategory();
+        categoryCount.put(category, categoryCount.getOrDefault(category, 0) + 1);
+    }
+
+    return categoryCount;
+    }
+$ git commit -m ""
+$ git add .
+$ git push origin 7-count-tasks-per-category
+
+20. При спојувањето на и на двете гранки не се случува конфликт. 
+стратегија за спојување која е употребена во двата е Fast-Forward. 21. 
+22. git checkout master git merge 1-remove-a-task-by-name Во овој merge 
+не се случува конфликт. Стратегијата по која се извршува е Fast-forward 
+23. git push origin master 
+25. git log --oneline --graph --all >>logs.txt 
+echo "dokumentacija">223244.txt 
+nano 223244.txt
+git add logs.txt 223244.txt
+git commit-m "Final commit"

@@ -1,0 +1,16 @@
+*   427ee22 Merge branch '7-count-tasks-per-category'
+|\  
+| * 46f4065 Implemented count tasks per category function
+* |   e5258a1 Merge pull request #14 from taleks1/5-filter-tasks-by-category
+|\ \  
+| * | ec00d42 Implemented filter tasks by category function
+| |/  
+* |   d75c316 Merge pull request #13 from taleks1/1-remove-a-task-by-name
+|\ \  
+| |/  
+|/|   
+| * f87dc5e Implemented function to remove a task by name
+|/  
+* d7467d3 Add starter code
+* 6566682 Add starter code
+* 67524da Initial commit
