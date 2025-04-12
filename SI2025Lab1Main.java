@@ -87,7 +87,13 @@ class TaskManager {
     // 5. Filter tasks by category
     public List<Task> filterByCategory(String category) {
         // TODO: Implement filtering logic
-        return new ArrayList<>();
+         List<Task> filteredTasks = new ArrayList<>();
+    for (Task task : tasks) {
+        if (task.getCategory().equalsIgnoreCase(category)) {
+            filteredTasks.add(task);
+        }
+    }
+    return filteredTasks;
     }
 
     // 6. Find the highest-priority unfinished task
@@ -99,7 +105,14 @@ class TaskManager {
     // 7. Count tasks per category
     public Map<String, Integer> countTasksPerCategory() {
         // TODO: Implement counting logic
-        return new HashMap<>();
+        Map<String, Integer> categoryCount = new HashMap<>();
+
+    for (Task task : tasks) {
+        String category = task.getCategory();
+        categoryCount.put(category, categoryCount.getOrDefault(category, 0) + 1);
+    }
+
+    return categoryCount;
     }
 
     // 8. Mark a task as completed by name
